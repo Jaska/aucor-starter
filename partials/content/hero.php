@@ -37,6 +37,11 @@ if (is_singular() && has_post_thumbnail()) {
   $image = aucor_starter_get_image(get_post_thumbnail_id(), 'hero', ['lazyload' => 'animated']);
 }
 
+if (empty($image)){
+  // use frontpage hero if empty
+  $image = aucor_starter_get_image(get_post_thumbnail_id(get_option('page_on_front')), 'hero', ['lazyload' => 'animated']);
+}
+
 if (!empty($image)) {
   $class[] = 'hero--has-background';
 } else {

@@ -9,7 +9,7 @@
 
 // unified transition for theme
 @mixin transition($property:all) {
-  transition: $property .2s ease-in-out;
+  transition: $property .4s ease-in-out;
 }
 
 // fix WP admin bar height on sticky menu

@@ -8,6 +8,13 @@
 .editor-styles-wrapper .wp-block-columns,
 .wysiwyg .wp-block-columns {
 
+  &.wp-block-columns:first-child {
+    margin-top: 0;
+  }
+  &.wp-block-columns:last-child {
+    margin-bottom: 0;
+  }
+
   .wp-block-column {
     margin: 0 0 $gap;
     @include child-margin-reset;

@@ -158,3 +158,13 @@ span[data-hyphens]{
   -o-hyphens: auto;
   hyphens: auto;
 }
+
+iframe {
+  display: block;
+}
+
+.alignfull {
+  iframe {
+    width: 100%;
+  }
+}

@@ -31,6 +31,8 @@ add_action('wp_enqueue_scripts', function() {
     false
   );
 
+  wp_enqueue_script("jquery");
+
   // main js
   wp_enqueue_script(
     'aucor_starter-js',

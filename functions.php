@@ -23,6 +23,11 @@ require_once 'inc/_conf/register-localization.php';
 require_once 'inc/_conf/register-menus.php';
 
 /**
+ * Custom blocks
+ */
+require_once 'inc/_conf/register-custom-blocks.php';
+
+/**
  * Editor
  */
 require_once 'inc/editor/setup-classic-editor.php';

@@ -24,6 +24,12 @@
     margin-left: -$gap;
     margin-right: -$gap;
     max-width: none;
+
+    img {
+      max-width: none;
+      width: 100%;
+      vertical-align: bottom;
+    }
   }
 
   & > .alignwide {

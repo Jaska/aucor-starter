@@ -232,6 +232,9 @@ aucor_navigation = function( menu, options ) {
       // focus out of the menu
       menu_toggle.dispatchEvent(new Event('focus'));
 
+      var x = 'menu-active--' + menu.getAttribute('id');
+      document.body.classList.remove(x);
+
     } else {
 
       // .active class to hamburger icon
@@ -240,6 +243,9 @@ aucor_navigation = function( menu, options ) {
 
       // .active class to menu container
       menu.classList.add('active');
+
+      var x = 'menu-active--' + menu.getAttribute('id');
+      document.body.classList.add(x);
     }
   });
 

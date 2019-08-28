@@ -23,8 +23,8 @@
 
   &.alignwide,
   &.alignfull {
-    margin-top: $gap-big;
-    margin-bottom: $gap-big;
+    margin-top: $gap;
+    margin-bottom: $gap;
   }
 
   &.alignfull {
@@ -97,7 +97,7 @@
 
   &.alignwide,
   &.alignfull {
-    margin-bottom: $gap-big;
+    margin-bottom: $gap;
   }
 
 }
@@ -105,6 +105,6 @@
 /* Only back-end
 ----------------------------------------------- */
 
-.editor-styles-wrapper .wp-block-columns {
+// .editor-styles-wrapper .wp-block-columns {
 
-}
+// }

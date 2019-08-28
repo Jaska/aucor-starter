@@ -37,8 +37,8 @@ module.exports = {
         // project specific js
         "scripts/components/navigation.js",
         "scripts/components/markup-enhancements.js",
-        "scripts/main.js"
-
+        "scripts/components/hyphenate-long-words.js",
+        "scripts/main.js",
       ],
 
       // critical js to be loaded in <head>

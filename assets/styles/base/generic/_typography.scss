@@ -150,3 +150,11 @@ input[type="submit"]:focus,
   outline: 1px dotted;
   outline-offset: -2px;
 }
+
+span[data-hyphens]{
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  -o-hyphens: auto;
+  hyphens: auto;
+}

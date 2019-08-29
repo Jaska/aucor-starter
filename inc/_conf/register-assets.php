@@ -46,6 +46,11 @@ add_action('wp_enqueue_scripts', function() {
   wp_deregister_style('wp-block-library-theme');
   wp_deregister_style('wp-block-library');
 
+  add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
+  function wps_deregister_styles() {
+      wp_dequeue_style( 'wp-block-library' );
+  }
+
   // comments
   if (is_singular() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');

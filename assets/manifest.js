@@ -8,7 +8,7 @@ module.exports = {
    * URL for BrowserSync to mirror
    */
   devUrl: function() {
-    return "https://starter.dev";
+    return "https://aucor_starter.local";
   },
 
   /**

@@ -1,0 +1,231 @@
+{
+    "key": "group_5cc73ee4a685b",
+    "title": "Lohko: Nostoblokki",
+    "fields": [
+        {
+            "key": "field_5cc73f4b5cc61",
+            "label": "Linkki",
+            "name": "link",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cc73f815cc62",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 1,
+            "multiple": 0,
+            "return_format": "object",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "acfe_validate": "",
+            "acfe_update": "",
+            "ui": 1
+        },
+        {
+            "key": "field_5cc73f815cc62",
+            "label": "Näytä uusin artikkeli",
+            "name": "nayta_uusin_artikkeli",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "acfe_validate": "",
+            "acfe_update": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cc73ef35cc60",
+            "label": "Pohja",
+            "name": "template",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": {
+                "oletus": "oletus",
+                "variantti": "variantti"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "acfe_validate": "",
+            "acfe_update": "",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_5cc73fd65cc63",
+            "label": "Määritä itse haluamasi sisällöt",
+            "name": "maarita_itse_haluamasi_sisallot",
+            "type": "true_false",
+            "instructions": "Tyhjien kenttien sisältö otetaan \"Linkki\" sivulta mikäli se on määritelty",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cc73f815cc62",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "acfe_validate": "",
+            "acfe_update": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5cc740265cc64",
+            "label": "Otsikko",
+            "name": "otsikko",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cc73fd65cc63",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cc7402f5cc65",
+            "label": "Kuvausteksti",
+            "name": "kuvausteksti",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cc73fd65cc63",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_5cc740475cc66",
+            "label": "Kuva",
+            "name": "kuva",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cc73fd65cc63",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/nostoblokki"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_note": "",
+    "acfe_meta": "",
+    "modified": 1567254541
+}

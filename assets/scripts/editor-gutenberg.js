@@ -19,9 +19,9 @@ wp.domReady(function() {
   wp.blocks.unregisterBlockStyle('core/quote', 'large');
 
 //  // add lead paragraph style
-//  wp.blocks.registerBlockStyle('core/paragraph', {
-//    name: 'lead',
-//    label: 'Lead paragraph',
-//  });
+ wp.blocks.registerBlockStyle('core/paragraph', {
+   name: 'lead',
+   label: 'Lead paragraph',
+ });
 
 });

@@ -23,7 +23,7 @@ p, .p {
   font-weight: $normal;
   line-height: $line-height;
   margin: 0 0 1.5rem;
-  &.lead {
+  &.lead, &.is-style-lead {
     font-size: 1.125rem;
     @include breakpoint($s) {
       font-size: 1.25rem;

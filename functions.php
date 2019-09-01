@@ -49,6 +49,7 @@ require_once 'inc/helpers/function-hardcoded-ids.php';
 require_once 'inc/helpers/function-html-attributes.php';
 require_once 'inc/helpers/function-last-edited.php';
 require_once 'inc/helpers/function-titles.php';
+require_once 'inc/helpers/menu-shortcode.php';
 require_once 'inc/helpers/setup-fallbacks.php';
 
 /**

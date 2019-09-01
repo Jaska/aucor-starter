@@ -13,20 +13,11 @@
 
   <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
 
-    <div class="site-footer__container">
-
-      <div class="site-footer__branding">
-        <span class="site-footer__branding__title">
-          <?php bloginfo('name'); ?>
-        </span>
-      </div>
-
-      <div class="site-footer__social">
-        <?php get_template_part('partials/navigation/menu-social'); ?>
-      </div>
-
+    <div class="site-footer__container wysiwyg">
+      <?php
+      echo get_lang_content('footer');
+      ?>
     </div>
-
 
   </footer><!-- #colophon -->
 </div><!-- #page -->

@@ -3,13 +3,17 @@
 ========================================================================== */
 
 .site-footer {
-  background: $grey-light;
+  background: $primary;
   padding: 2rem 0;
+
+  &, *, a {
+    color: $white;
+  }
 
   &__container {
     @include wrap;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
   }
 
 }

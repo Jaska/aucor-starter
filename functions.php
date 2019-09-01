@@ -52,6 +52,8 @@ require_once 'inc/helpers/function-last-edited.php';
 require_once 'inc/helpers/function-titles.php';
 require_once 'inc/helpers/menu-shortcode.php';
 require_once 'inc/helpers/setup-fallbacks.php';
+require_once 'inc/helpers/function-get-lang-content.php';
+
 
 /**
  * Media

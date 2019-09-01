@@ -34,6 +34,7 @@ require_once 'inc/_conf/register-custom-blocks.php';
 require_once 'inc/editor/setup-classic-editor.php';
 require_once 'inc/editor/setup-gutenberg.php';
 require_once 'inc/editor/setup-theme-support.php';
+require_once 'inc/editor/cpt-class-gutenberg.php';
 
 /**
  * Forms

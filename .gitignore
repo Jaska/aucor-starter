@@ -26,3 +26,4 @@ node_modules
 
 # no longer track dist folder
 dist
+/assets/last-edited.json

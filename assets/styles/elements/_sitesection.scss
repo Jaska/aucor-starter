@@ -1,0 +1,24 @@
+.sitesection {
+  $this : &;
+
+  &, p {
+    @include wrap;
+    @include narrow-content;
+  }
+
+  &__wrapper {
+    padding-top: $gap;
+    padding-bottom: $gap;
+    text-align: center;
+    background: $grey-light;
+    margin-bottom: $gap;
+  }
+
+  &__wrapper .wysiwyg .wp-block-wpseed-container,
+  &__wrapper .wysiwyg > * {
+    max-width: $max-width-l;
+
+  }
+
+
+}

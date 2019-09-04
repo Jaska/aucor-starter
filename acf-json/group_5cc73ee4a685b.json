@@ -74,7 +74,9 @@
             "acfe_permissions": "",
             "choices": {
                 "oletus": "oletus",
-                "variantti": "variantti"
+                "iso_nelio": "iso_nelio",
+                "korkea_ohut": "korkea_ohut",
+                "pieni_levea": "pieni_levea"
             },
             "default_value": [],
             "allow_null": 0,
@@ -227,5 +229,5 @@
     "acfe_permissions": "",
     "acfe_note": "",
     "acfe_meta": "",
-    "modified": 1567254541
+    "modified": 1567396621
 }

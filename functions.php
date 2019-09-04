@@ -53,6 +53,7 @@ require_once 'inc/helpers/function-titles.php';
 require_once 'inc/helpers/menu-shortcode.php';
 require_once 'inc/helpers/setup-fallbacks.php';
 require_once 'inc/helpers/function-get-lang-content.php';
+require_once 'inc/helpers/function-get-relevant-sidebar.php';
 require_once 'inc/helpers/function-get-archive-post-type.php';
 
 

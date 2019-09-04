@@ -1,0 +1,269 @@
+{
+    "key": "group_5d6a2f619799f",
+    "title": "Yleiset lisäkentät",
+    "fields": [
+        {
+            "key": "field_5d6a2f72b4570",
+            "label": "Artikkelikuva",
+            "name": "_thumbnail_id",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "acfe_thumbnail": 0,
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6a2f7eb4571",
+            "label": "Banner pohja",
+            "name": "banner_pohja",
+            "type": "button_group",
+            "instructions": "Artikkelikuva, korkeampi kuva teksteillä, video, diashow",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "choices": {
+                "oletus": "Artikkelikuva",
+                "iso_banner": "Korkeampi kuva tekstillä",
+                "video": "Video banneriin",
+                "slider": "Diashow"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6a30f55f1cf",
+            "label": "Korkeampi kuva",
+            "name": "korkeampi_kuva_group",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6a2f7eb4571",
+                        "operator": "==",
+                        "value": "iso_banner"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "block",
+            "sub_fields": []
+        },
+        {
+            "key": "field_5d6a30735f1cb",
+            "label": "Video",
+            "name": "video_group",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6a2f7eb4571",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d6a30875f1cc",
+                    "label": "Video",
+                    "name": "video",
+                    "type": "file",
+                    "instructions": "HUOM! Tämä on tarkoitettu bannerin taustavideoille. Lyhyt kesto (max 10sek) ja pieni koko (max 5meg).\r\n\r\nVideot kannattaa leikata ja pakata webbiä varten ennen palvelimelle lataamista.\r\nEsim https:\/\/handbrake.fr\/ -ohjelma tai suoraan selaimessa https:\/\/www.youcompress.com\/\r\n\r\nVinkki 2: Ota ääniraita pois sillä tässä videossa ei ääni kuulu.\r\n\r\nLinkit ovat vain ehdotuksia enkä takaa niiden toimimista.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": 5,
+                    "mime_types": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d6a30ba5f1cd",
+            "label": "Diashow",
+            "name": "diashow_group",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6a2f7eb4571",
+                        "operator": "==",
+                        "value": "slider"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d6a30ce5f1ce",
+                    "label": "Diashow",
+                    "name": "diashow",
+                    "type": "gallery",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "return_format": "array",
+                    "preview_size": "hero_md",
+                    "insert": "append",
+                    "library": "all",
+                    "min": "",
+                    "max": "",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "acfe_validate": "",
+                    "acfe_update": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5d6a303e5f1c9",
+            "label": "Banner otsikko",
+            "name": "banner_otsikko",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6a304d5f1ca",
+            "label": "Banner kuvaus",
+            "name": "banner_kuvaus",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "sivupalkit"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "osat"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": -4,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_note": "",
+    "acfe_meta": "",
+    "modified": 1567613109
+}

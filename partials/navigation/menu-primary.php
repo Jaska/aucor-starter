@@ -22,3 +22,15 @@
   ?>
 
 </nav><!-- #primary-navigation -->
+
+<?php
+  wp_nav_menu(array(
+    'theme_location' => 'langselection',
+    'container'      => '',
+    'menu_id'        => 'primary-navigation__langselection',
+    'menu_class'     => 'language-navigation__items',
+    'link_before'    => '',
+    'link_after'     => '',
+    'fallback_cb'    => '',
+  ));
+?>

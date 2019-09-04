@@ -48,3 +48,6 @@ select.link-to option[value="post"],
   display: none;
 }
 
+table.fixed {
+  table-layout: auto !important;
+}

@@ -71,6 +71,15 @@
   @return calculateRem($size);
 }
 
+@function themefontsize($px){
+  $x : $px * 0.8;
+  @return rem($x);
+}
+
+@mixin textshadow(){
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.65);
+}
+
 @mixin admin-sticky-fix( $offset: 0 ) {
   $narrow-offset: 46px;
   $wide-offset: 32px;

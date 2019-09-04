@@ -1,0 +1,229 @@
+{
+    "key": "group_5d6f3fd2eb774",
+    "title": "Sivun lisätiedot",
+    "fields": [
+        {
+            "key": "field_5d6f3fd2ee92d",
+            "label": "Sivupohjan oletussisällöt",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "Tämän kautta voit yliajaa tämän postaukselle elementit (alaosiot ja sivupalkki)\r\nSivuston osat -osiossa voi määrittää elementit globaalisti tai sivupohjakohtaisesti.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5d6f3fd2ee95b",
+            "label": "Aseta sivun alaosio",
+            "name": "aseta_sivun_alaosio",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_validate": false,
+            "acfe_update": false
+        },
+        {
+            "key": "field_5d6f4780f814c",
+            "label": "Käytä postaustyypille asetettuja alaosioita",
+            "name": "sivun_alaosiot_postaustyypista",
+            "type": "acfe_post_types",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6f3fd2ee95b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "field_type": "checkbox",
+            "return_format": "name",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6f3fd2ee98f",
+            "label": "Määritä sivun alaosiot",
+            "name": "sivun_alaosiot",
+            "type": "relationship",
+            "instructions": "Järjestele elementit raahaamalla. Footer ja kartta -osiot näkyvät kaikkialla tästä huolimatta - niitä ei tarvitse laittaa uudelleen",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6f3fd2ee95b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "post_type": [
+                "osat"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6f41cab0af9",
+            "label": "Aseta sivupalkki",
+            "name": "aseta_sivupalkki",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6f41e0b0afa",
+            "label": "Määritä sivupalkki",
+            "name": "sivun_sivupalkki",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6f41cab0af9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "post_type": [
+                "sivupalkit"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": true,
+                "acfe_bidirectional_related": "field_5d6f3e0dcf24a"
+            },
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6f416d7a9ab",
+            "label": " ",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "all"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "osat"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "sivupalkit"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_note": "",
+    "acfe_meta": "",
+    "modified": 1567613115
+}

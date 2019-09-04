@@ -32,6 +32,7 @@ function aucor_starter_gutenberg_allowed_blocks($allowed_block_types, $post) {
   $blocks[] = 'core/quote';
   $blocks[] = 'core/file';
   $blocks[] = 'core/html';
+  $blocks[] = 'core/video';
 
   /**
    * Formatting

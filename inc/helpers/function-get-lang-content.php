@@ -4,11 +4,16 @@
  *
  * @package starter
  */
-
-function get_lang_content($id){
+function get_lang_object($id, $return_object = true){
+  return get_lang_content($id, $return_object);
+}
+function get_lang_content($id, $return_object = false){
   if (!is_int($id)){
     if (is_string($id)){
       $id = starter_get_hardcoded_id($id);
+      if ($id == '0'){
+        return;
+      }
     } else {
       return false;
     }
@@ -20,6 +25,11 @@ function get_lang_content($id){
   $content = $post_object->post_content;
   $content = apply_filters('the_content', $content);
   $content = str_replace(']]>', ']]>', $content);
+  $post_object->post_content = $content;
+
+  if ($return_object){
+    return $post_object;
+  }
 
   return $content;
 }

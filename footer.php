@@ -8,14 +8,21 @@
  */
 
 ?>
-
+    <?php
+    echo get_relevant_sections();
+    ?>
+    <?php $map_content = get_lang_content('map', false);
+    if ($map_content): ?>
+    <section class="map wysiwyg sitesection__wrapper sitesection">
+      <?php echo $map_content; ?>
+    </section>
+    <?php endif; ?>
   </div><!-- #content -->
-
   <footer id="colophon" class="site-footer" itemscope itemtype="http://schema.org/WPFooter">
 
     <div class="site-footer__container wysiwyg">
       <?php
-      echo get_lang_content('footer');
+      echo get_lang_content('footer', false);
       ?>
     </div>
 

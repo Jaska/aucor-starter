@@ -57,6 +57,7 @@ require_once 'inc/helpers/setup-fallbacks.php';
 require_once 'inc/helpers/function-get-lang-content.php';
 require_once 'inc/helpers/function-get-relevant-sidebar.php';
 require_once 'inc/helpers/function-get-archive-post-type.php';
+require_once 'inc/helpers/function-get-relevant-sections.php';
 
 
 /**

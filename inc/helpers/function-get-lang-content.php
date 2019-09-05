@@ -19,7 +19,7 @@ function get_lang_content($id, $return_object = false){
     }
   }
   if(function_exists('pll_get_post')){
-    $id = pll_get_post($id);
+    $id = pll_get_post($id) ?: $id;
   }
   $post_object = get_post($id);
   $content = $post_object->post_content;

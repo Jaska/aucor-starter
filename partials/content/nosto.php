@@ -91,7 +91,7 @@ nostoblokki--<?= $pohja; ?>">
 	<?php if ($kuva) { ?>
 		<div class="nostoblokki__kuva">
 		<?php if ($linkki) { echo '<a href="'.$linkki.'">'; } ?>
-			<?php echo wp_get_attachment_image($kuva, 'square_l'); ?>
+			<?php echo wp_get_attachment_image($kuva, 'large'); ?>
 		<?php if ($linkki) { echo '</a>'; } ?>
 		</div>
 	<?php } ?>

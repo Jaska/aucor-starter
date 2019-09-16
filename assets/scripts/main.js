@@ -36,7 +36,9 @@ if (typeof objectFitPolyfill === "function") {
 
   $(document).ready(function(){
 
+    if ($('.blocks-gallery-item a').length > 0){
       var lightbox = $('.blocks-gallery-item a').simpleLightbox();
+    }
 
   });
 })(jQuery);

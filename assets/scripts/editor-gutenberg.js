@@ -24,4 +24,9 @@ wp.domReady(function() {
    label: 'Lead paragraph',
  });
 
+  wp.blocks.registerBlockStyle('core/table', {
+    name: 'no_lines',
+    label: 'Ei rivejä | No lines',
+  });
+
 });

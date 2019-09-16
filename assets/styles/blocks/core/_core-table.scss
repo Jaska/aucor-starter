@@ -85,6 +85,16 @@
     }
   }
 
+  &.is-style-no_lines {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+
+    &, tr, td {
+      border: none;
+      background: none;
+    }
+  }
+
 }
 
 /* Only front-end

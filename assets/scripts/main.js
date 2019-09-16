@@ -31,3 +31,12 @@ if (typeof objectFitPolyfill === "function") {
 
   });
 }
+
+(function($){
+
+  $(document).ready(function(){
+
+      var lightbox = $('.blocks-gallery-item a').simpleLightbox();
+
+  });
+})(jQuery);

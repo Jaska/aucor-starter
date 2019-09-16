@@ -24,7 +24,9 @@
     "fitvids": "^2.0.0",
     "lazysizes": "^4.0.4",
     "objectFitPolyfill": "^2.1.1",
-    "svgxuse": "^1.2.6"
+    "simplelightbox": "^1.17.2",
+    "svgxuse": "^1.2.6",
+    "swiper": "^4.5.0"
   },
   "devDependencies": {
     "beeper": "^1.1.1",

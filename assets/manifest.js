@@ -34,6 +34,9 @@ module.exports = {
         // vanilla js version of fitvids, that makes iframe videos responsice (https://www.npmjs.com/package/fitvids)
         "../node_modules/fitvids/dist/fitvids.js",
 
+        // simplelightbox https://github.com/andreknieriem/simplelightbox
+        "../node_modules/simplelightbox/dist/simple-lightbox.js",
+
         // project specific js
         "scripts/components/navigation.js",
         "scripts/components/markup-enhancements.js",

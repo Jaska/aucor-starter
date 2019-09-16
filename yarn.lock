@@ -2938,6 +2938,11 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
+jquery@>=1.7.0:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.4.1.tgz#714f1f8d9dde4bdfa55764ba37ef214630d80ef2"
+  integrity sha512-36+AdBzCL+y6qjw5Tx7HgzeGCzC81MDDgaUP8ld2zhx58HdqXGoBd+tHdrBMiyjGQs0Hxs/MLZTu/eHNJJuWPw==
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.5.1.tgz#1efa39ef2c5f7980bb1784ade4a8af2de3291121"
@@ -4767,6 +4772,13 @@ sigmund@~1.0.0:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+simplelightbox@^1.17.2:
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/simplelightbox/-/simplelightbox-1.17.2.tgz#a9fcf2185fa661a511a728513e34f348542c90f7"
+  integrity sha512-LbVFh5UPUacxu/8XupgJ3nMfLxl+o6JCY/EiF9KgTCltKoNZOzUAspElwYqJ3O4YfPmUEzlyEJZyfOKAXE7Bnw==
+  dependencies:
+    jquery ">=1.7.0"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

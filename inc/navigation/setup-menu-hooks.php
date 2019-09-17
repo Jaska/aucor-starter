@@ -52,6 +52,8 @@ function aucor_starter_social_menu_icons($title, $item, $args, $depth) {
       'mailto:'        => 'mail',
       'twitter.com'    => 'twitter',
       'youtube.com'    => 'youtube',
+      'tripadvisor.com'    => 'tripadvisor',
+      'tripadvisor.fi'    => 'tripadvisor',
     );
 
     // fallback icon

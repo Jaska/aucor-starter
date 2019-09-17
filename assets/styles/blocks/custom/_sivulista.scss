@@ -1,0 +1,133 @@
+.sivulista {
+
+  @at-root .block-editor-page & {
+    pointer-events: none !important;
+  }
+
+  &__posts {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    @at-root .sivulista.post_count_1 & {
+      justify-content: center;
+    }
+
+    $thisgap : $gap/2;
+    margin-left: -$thisgap;
+    margin-right: -$thisgap;
+
+    & > * {
+      padding-left:  $thisgap;
+      padding-right: $thisgap;
+      padding-bottom: $thisgap*2;
+      margin: 0;
+    }
+  }
+
+  .card {
+    width: calc(100% / 3);
+    font-family: $font-title;
+    color: $white;
+    @include textshadow;
+
+    * {
+      color: inherit;
+    }
+
+    &__container {
+    height: 0;
+    padding-top: calc(9 / 16 * 100%);
+    position: relative;
+    width: 100%;
+    display: flex;
+    }
+
+    &__thumbnail,
+    &__content {
+      position: absolute;
+      display: flex;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__thumbnail {
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        max-width: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+      }
+    }
+
+    &__content {
+      pointer-events: none;
+      z-index: 2;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-end;
+      padding-bottom: $gap-small;
+      background: none;
+      margin: $gap-small;
+      width: calc(100% - #{$gap-small} * 2);
+      height: calc(100% - #{$gap-small} * 2);
+      @include transition;
+    }
+    &__header {
+      width: 100%;
+      flex: 1 1 auto;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: flex-end;
+      justify-content: center;
+
+      &__title {
+        margin: 0;
+        font-size: rem(20px);
+        font-weight: bold;
+        @include breakpoint($m){
+          font-size: rem(27px);
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    &__summary {
+      p:last-child {
+        margin-bottom: 0;
+      }
+      flex: 0 0 auto;
+      height: 0;
+      overflow: hidden;
+      @include transition;
+
+    }
+
+    &:hover {
+        .card__summary {
+          flex: 1 1 auto;
+        }
+        .card__content {
+          background: rgba(0, 0, 0, 0.30);
+        }
+    }
+
+    // &__flexhelper_1,
+    // &__flexhelper_2 {
+    //   flex: 1 0 auto;
+    // }
+
+  }
+
+}

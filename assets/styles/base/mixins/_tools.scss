@@ -61,6 +61,13 @@
   @return #{$remSize}rem;
 }
 
+// Function for converting a px based font-size to rem.
+@function calculateEm($size) {
+  $emSize: $size / 16px;
+//Default font size on html element is 100%, equivalent to 16px;
+  @return #{$emSize}em;
+}
+
 // Mixin that will include the fall back px declaration as well as the calculated rem value.
 @mixin fontSize($size) {
   font-size: $size;
@@ -69,6 +76,10 @@
 
 @function rem($size){
   @return calculateRem($size);
+}
+
+@function em($size){
+  @return calculateEm($size);
 }
 
 @function themefontsize($px){

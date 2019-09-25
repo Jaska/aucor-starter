@@ -24,6 +24,9 @@ module.exports = {
 
       // main js to be loaded in footer
       "main.js": [
+         // css-element-queries (https://github.com/marcj/css-element-queries)
+         "../node_modules/css-element-queries/src/ResizeSensor.js",
+         "../node_modules/css-element-queries/src/ElementQueries.js",
 
         // polyfill for external x:link svg (https://github.com/Keyamoon/svgxuse)
         "../node_modules/svgxuse/svgxuse.js",
@@ -57,6 +60,10 @@ module.exports = {
 
       // gutenberg editor specific js
       "editor-gutenberg.js": [
+
+        // css-element-queries (https://github.com/marcj/css-element-queries)
+        "../node_modules/css-element-queries/src/ResizeSensor.js",
+        "../node_modules/css-element-queries/src/ElementQueries.js",
 
         "scripts/editor-gutenberg.js"
 

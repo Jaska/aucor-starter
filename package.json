@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
+    "css-element-queries": "^1.2.1",
     "fitvids": "^2.0.0",
     "lazysizes": "^4.0.4",
     "objectFitPolyfill": "^2.1.1",

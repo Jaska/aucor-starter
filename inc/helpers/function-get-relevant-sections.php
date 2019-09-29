@@ -57,6 +57,12 @@ function get_relevant_sections(){
       $echo .= '<div class="wysiwyg">';
       $echo .= $obj->post_content;
       $echo .= '</div>';
+
+      $edit_link = get_edit_post_link($page_id);
+      if ($edit_link){
+        $echo .= '<a style="margin-top:.5rem; display: inline-block;" href="'.$edit_link.'">Muokkaa / Edit</a>';
+      }
+
       $echo .= '</section>';
     }
 

@@ -11,7 +11,7 @@
   margin: $gap auto;
   display: grid;
   grid-gap: $gap-small;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
 
   &.alignwide,
   &.alignfull {

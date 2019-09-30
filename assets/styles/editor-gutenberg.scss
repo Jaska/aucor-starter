@@ -30,6 +30,14 @@
 @import "base/generic/normalize";
 @import "base/generic/all";
 
+
+.edit-post-visual-editor
+// .editor-block-list__block
+{
+  font-family: $font-text;
+  @import "base/generic/typography";
+}
+
 /* Blocks
 ----------------------------------------------- */
 
@@ -51,10 +59,7 @@
 @import "blocks/settings/blocks-alignment";
 @import "blocks/settings/blocks-colors";
 
-.edit-post-visual-editor .editor-block-list__block {
-  font-family: $font-text;
-  @import "base/generic/typography";
-}
+
 
 // hide font-size selection
 .components-panel__body.blocks-font-size .components-base-control:first-of-type {

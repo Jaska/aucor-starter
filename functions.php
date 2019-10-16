@@ -58,7 +58,9 @@ require_once 'inc/helpers/function-get-lang-content.php';
 require_once 'inc/helpers/function-get-relevant-sidebar.php';
 require_once 'inc/helpers/function-get-archive-post-type.php';
 require_once 'inc/helpers/function-get-relevant-sections.php';
-
+require_once 'inc/helpers/function-sibling-nav.php';
+require_once 'inc/helpers/get-content-filters.php';
+require_once 'inc/helpers/function-display-map.php';
 
 /**
  * Media

@@ -51,7 +51,7 @@ if (get_field('sivulistaus')['otetaanko_kategoria_taman_sivun_kategoriasta']) {
 // WP_Query arguments
 // $custom_post_type = array('page, post');
 $args = array(
-	'post_type'              => array( $custom_post_type ),
+	'post_type'              => $custom_post_type,
 	'posts_per_page'         => $posts_per_page,
 	'orderby'                  => $orderby,
 	'order'                  => $order,

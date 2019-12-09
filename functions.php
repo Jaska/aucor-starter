@@ -22,7 +22,7 @@ require_once 'inc/_conf/register-image-sizes.php';
 require_once 'inc/_conf/register-localization.php';
 require_once 'inc/_conf/register-menus.php';
 require_once 'inc/_conf/image-crop-fixer.php';
-require_once 'inc/_conf/deregister-functionality.php';
+// require_once 'inc/_conf/deregister-functionality.php';
 require_once 'inc/_conf/add-nonpublic-cpt-to-polylang.php';
 
 /**
@@ -58,8 +58,8 @@ require_once 'inc/helpers/function-get-lang-content.php';
 require_once 'inc/helpers/function-get-relevant-sidebar.php';
 require_once 'inc/helpers/function-get-archive-post-type.php';
 require_once 'inc/helpers/function-get-relevant-sections.php';
-require_once 'inc/helpers/function-sibling-nav.php';
-require_once 'inc/helpers/get-content-filters.php';
+// require_once 'inc/helpers/function-sibling-nav.php';
+// require_once 'inc/helpers/get-content-filters.php';
 require_once 'inc/helpers/function-display-map.php';
 
 /**

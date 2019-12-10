@@ -67,14 +67,25 @@
             "field_type": "checkbox",
             "return_format": "name",
             "acfe_validate": "",
-            "acfe_update": ""
+            "acfe_update": "",
+            "post_type": [],
+            "multiple": 0,
+            "allow_null": 0,
+            "choices": [],
+            "default_value": "",
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "layout": "",
+            "toggle": 0,
+            "allow_custom": 0
         },
         {
             "key": "field_5d6f3fd2ee98f",
             "label": "Määritä sivun alaosiot",
             "name": "sivun_alaosiot",
             "type": "relationship",
-            "instructions": "Järjestele elementit raahaamalla. Footer ja kartta -osiot näkyvät kaikkialla tästä huolimatta - niitä ei tarvitse laittaa uudelleen",
+            "instructions": "Järjestele elementit raahaamalla. Footer -osio näkyy kaikkialla tästä huolimatta - sitä ei tarvitse laittaa uudelleen",
             "required": 0,
             "conditional_logic": [
                 [
@@ -105,9 +116,7 @@
             "return_format": "object",
             "acfe_bidirectional": {
                 "acfe_bidirectional_enabled": "0"
-            },
-            "acfe_validate": "",
-            "acfe_update": ""
+            }
         },
         {
             "key": "field_5d6f41cab0af9",
@@ -119,7 +128,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "hidden",
                 "id": ""
             },
             "acfe_permissions": "",
@@ -127,9 +136,7 @@
             "default_value": 0,
             "ui": 1,
             "ui_on_text": "",
-            "ui_off_text": "",
-            "acfe_validate": "",
-            "acfe_update": ""
+            "ui_off_text": ""
         },
         {
             "key": "field_5d6f41e0b0afa",
@@ -149,13 +156,11 @@
             ],
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "hidden",
                 "id": ""
             },
             "acfe_permissions": "",
-            "post_type": [
-                "sivupalkit"
-            ],
+            "post_type": "",
             "taxonomy": "",
             "filters": [
                 "search",
@@ -166,11 +171,9 @@
             "max": "",
             "return_format": "object",
             "acfe_bidirectional": {
-                "acfe_bidirectional_enabled": true,
+                "acfe_bidirectional_enabled": "1",
                 "acfe_bidirectional_related": "field_5d6f3e0dcf24a"
-            },
-            "acfe_validate": "",
-            "acfe_update": ""
+            }
         },
         {
             "key": "field_5d6f416d7a9ab",
@@ -206,7 +209,7 @@
             {
                 "param": "post_type",
                 "operator": "!=",
-                "value": "sivupalkit"
+                "value": "all"
             }
         ]
     ],
@@ -223,7 +226,8 @@
         "json"
     ],
     "acfe_permissions": "",
-    "acfe_note": "",
+    "acfe_form": 0,
     "acfe_meta": "",
-    "modified": 1567613115
+    "acfe_note": "",
+    "modified": 1575976554
 }

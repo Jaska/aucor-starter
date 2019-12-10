@@ -3,6 +3,26 @@
     "title": "Yleiset lisäkentät",
     "fields": [
         {
+            "key": "field_5d6a304d5f1ca",
+            "label": "Banner alaotsikko",
+            "name": "banner_alaotsikko",
+            "type": "text",
+            "instructions": "Pääotsikon alla oleva otsikko",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5d6a2f72b4570",
             "label": "Artikkelikuva",
             "name": "_thumbnail_id",
@@ -46,16 +66,12 @@
             "acfe_permissions": "",
             "choices": {
                 "oletus": "Artikkelikuva",
-                "iso_banner": "Korkeampi kuva tekstillä",
-                "video": "Video banneriin",
-                "slider": "Diashow"
+                "iso_banner": "Korkeampi kuva tekstillä"
             },
             "allow_null": 0,
             "default_value": "",
             "layout": "horizontal",
-            "return_format": "value",
-            "acfe_validate": "",
-            "acfe_update": ""
+            "return_format": "value"
         },
         {
             "key": "field_5d6a30f55f1cf",
@@ -185,68 +201,19 @@
                     "acfe_update": ""
                 }
             ]
-        },
-        {
-            "key": "field_5d6a303e5f1c9",
-            "label": "Banner otsikko",
-            "name": "banner_otsikko",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_permissions": "",
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "acfe_validate": "",
-            "acfe_update": ""
-        },
-        {
-            "key": "field_5d6a304d5f1ca",
-            "label": "Banner kuvaus",
-            "name": "banner_kuvaus",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_permissions": "",
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "acfe_validate": "",
-            "acfe_update": ""
         }
     ],
     "location": [
         [
             {
                 "param": "post_type",
-                "operator": "!=",
-                "value": "sivupalkit"
+                "operator": "==",
+                "value": "all"
             },
             {
                 "param": "post_type",
                 "operator": "!=",
                 "value": "osat"
-            },
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "all"
             }
         ]
     ],
@@ -263,7 +230,8 @@
         "json"
     ],
     "acfe_permissions": "",
-    "acfe_note": "",
+    "acfe_form": 0,
     "acfe_meta": "",
-    "modified": 1567613109
+    "acfe_note": "",
+    "modified": 1575982003
 }

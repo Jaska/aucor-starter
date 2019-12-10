@@ -33,12 +33,12 @@ function get_relevant_sections(){
     $archive_id = $page_type.'_options';
     // var_dump( get_field('sivun_alaosiot', $archive_id, false) );
 
-    $alaosat = get_field('sivun_alaosiot', $archive_id, false) ?? get_field('sivun_alaosiot', 'osat_options', false);
+    $alaosat = get_field('sivun_alaosiot', $archive_id, false) ?? get_field('sivun_alaosiot', 'osat_options', false) ?? array();
 
     if (
       get_field('aseta_sivun_alaosio') && get_field('sivun_alaosiot', $id, false)
     ) {
-      $alaosat = get_field('sivun_alaosiot', $id, false);
+      $alaosat = get_field('sivun_alaosiot', $id, false) ?? array();
     }
 
     $pois_nama_id = array(74, 145); //to avoid having duplicates

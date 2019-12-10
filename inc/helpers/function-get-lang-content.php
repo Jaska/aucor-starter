@@ -22,6 +22,10 @@ function get_lang_content($id, $return_object = false){
     $id = pll_get_post($id) ?: $id;
   }
   $post_object = get_post($id);
+  // var_dump($post_object);
+  if ($post_object === NULL){
+    return false;
+  }
   $content = $post_object->post_content;
   $content = apply_filters('the_content', $content);
   $content = str_replace(']]>', ']]>', $content);

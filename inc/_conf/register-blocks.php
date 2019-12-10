@@ -80,6 +80,8 @@ function aucor_starter_gutenberg_allowed_blocks($allowed_block_types, $post) {
   /**
    * Custom
    */
+  $blocks[] = 'acf/nostoblokki';
+  $blocks[] = 'acf/sivulista';
 
   return $blocks;
 

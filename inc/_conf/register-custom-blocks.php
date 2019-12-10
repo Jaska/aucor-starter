@@ -29,7 +29,7 @@ function register_custom_blocks() {
           // 'description'       => __('A custom testimonial block.'),
           'render_template'   => 'partials/content/nosto.php',
           'category'          => 'formatting',
-          'mode'              => 'preview',
+          'mode'              => 'edit',
           'icon'              => array('background' => 'lavender', 'src' => 'nametag'),
       ));
         acf_register_block(array(

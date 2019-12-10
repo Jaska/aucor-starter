@@ -22,6 +22,7 @@ require_once 'inc/_conf/register-image-sizes.php';
 require_once 'inc/_conf/register-localization.php';
 require_once 'inc/_conf/register-menus.php';
 require_once 'inc/_conf/image-crop-fixer.php';
+require_once 'inc/_conf/cpt.php';
 // require_once 'inc/_conf/deregister-functionality.php';
 require_once 'inc/_conf/add-nonpublic-cpt-to-polylang.php';
 

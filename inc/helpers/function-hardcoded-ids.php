@@ -19,7 +19,7 @@ function starter_get_hardcoded_id($key = '') {
     // case 'example':
     //   return 123;
     case 'footer':
-      return 74;
+      return 47;
 
     default:
       return 0;

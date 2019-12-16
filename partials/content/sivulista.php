@@ -79,6 +79,8 @@ if ($category){
 // The Query
 $query = new WP_Query( $args );
 
+$className .= $block['align'] ? 'align' . $block['align'] : '';
+
 $post_count_class = count($query->posts) ? 'post_count_'.count($query->posts) : false;
 if ($post_count_class){
   $className .= ' '.$post_count_class;

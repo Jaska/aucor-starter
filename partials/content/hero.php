@@ -34,7 +34,7 @@ if (is_singular() && get_post_type() === 'post') {
 // background
 $image = '';
 if (has_post_thumbnail()) {
-  $image = starter_get_image(get_post_thumbnail_id(), $image_size, ['lazyload' => 'animated']);
+  $image = starter_get_image(get_post_thumbnail_id(), 'hero', ['lazyload' => 'animated']);
 }
 
 if (empty($image)){

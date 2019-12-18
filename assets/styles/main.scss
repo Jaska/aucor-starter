@@ -87,6 +87,13 @@
 @import "views/templates/search";
 @import "views/templates/single";
 
+
+/* Custom blocks
+----------------------------------------------- */
+@import "blocks/custom/_nosto.scss";
+@import "blocks/custom/_sivulista.scss";
+
+
 /* Print
 ----------------------------------------------- */
 

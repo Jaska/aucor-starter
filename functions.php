@@ -43,6 +43,7 @@ require_once 'inc/editor/cpt-class-gutenberg.php';
  * Forms
  */
 require_once 'inc/forms/function-search-form.php';
+require_once 'inc/forms/af-forms-submit-text.php';
 
 /**
  * Helpers

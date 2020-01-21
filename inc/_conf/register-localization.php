@@ -62,6 +62,9 @@ add_filter('aucor_core_pll_register_strings', function() {
     'Color: Black'                       => 'Musta',
     'Color: Primary'                     => 'Pääväri',
 
+    //forms
+    'Forms: Lähetä'                     => 'Lähetä',
+
   );
 
 });

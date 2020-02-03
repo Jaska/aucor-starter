@@ -46,7 +46,7 @@ add_action('after_setup_theme', function() {
   add_image_size('wide_xl',  1824, 3648, false); // (default starter) gutenberg wide, relational to large
 
   // enable support for post thumbnails
-  add_theme_support('post-thumbnails');
+  // add_theme_support('post-thumbnails');
 
 });
 

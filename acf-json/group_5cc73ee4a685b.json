@@ -46,15 +46,13 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "100",
-                "class": "",
+                "class": "hidden",
                 "id": ""
             },
             "acfe_permissions": "",
             "message": "",
             "default_value": 0,
             "ui": 0,
-            "acfe_validate": "",
-            "acfe_update": "",
             "ui_on_text": "",
             "ui_off_text": ""
         },
@@ -62,7 +60,7 @@
             "key": "field_5cc73ef35cc60",
             "label": "Pohja",
             "name": "template",
-            "type": "select",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -73,27 +71,23 @@
             },
             "acfe_permissions": "",
             "choices": {
-                "oletus": "oletus",
-                "iso_nelio": "iso_nelio",
-                "korkea_ohut": "korkea_ohut",
-                "pieni_levea": "pieni_levea"
+                "default": "Tavallinen",
+                "fixed_1": "Paneeli",
+                "fixed_2": "Korkea paneeli"
             },
-            "default_value": [],
             "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
             "return_format": "value",
-            "acfe_validate": "",
-            "acfe_update": "",
-            "ajax": 0,
-            "placeholder": ""
+            "save_other_choice": 0
         },
         {
             "key": "field_5cc73fd65cc63",
             "label": "Määritä itse haluamasi sisällöt",
             "name": "maarita_itse_haluamasi_sisallot",
             "type": "true_false",
-            "instructions": "Tyhjien kenttien sisältö otetaan \"Linkki\" sivulta mikäli se on määritelty",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
@@ -110,11 +104,9 @@
                 "id": ""
             },
             "acfe_permissions": "",
-            "message": "",
+            "message": "Tyhjien kenttien sisältö otetaan \"Linkki\" sivulta mikäli se on määritelty",
             "default_value": 0,
             "ui": 0,
-            "acfe_validate": "",
-            "acfe_update": "",
             "ui_on_text": "",
             "ui_off_text": ""
         },
@@ -203,6 +195,30 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5e46eb5ee56e8",
+            "label": "Ulkoinen linkki",
+            "name": "external_link",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5cc73fd65cc63",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "return_format": "array"
         }
     ],
     "location": [
@@ -227,7 +243,8 @@
         "json"
     ],
     "acfe_permissions": "",
-    "acfe_note": "",
+    "acfe_form": 0,
     "acfe_meta": "",
-    "modified": 1567396621
+    "acfe_note": "",
+    "modified": 1581706842
 }

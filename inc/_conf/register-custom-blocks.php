@@ -29,7 +29,8 @@ function register_custom_blocks() {
           // 'description'       => __('A custom testimonial block.'),
           'render_template'   => 'partials/content/nosto.php',
           'category'          => 'formatting',
-          'mode'              => 'edit',
+          'mode'              => 'preview',
+          'align'             => 'wide',
           'icon'              => array('background' => 'lavender', 'src' => 'nametag'),
       ));
         acf_register_block(array(
@@ -40,6 +41,7 @@ function register_custom_blocks() {
           'category'          => 'formatting',
           // 'icon'              => 'admin-comments',
           'mode'              => 'preview',
+          'align'             => 'wide',
           'icon'              => array('background' => 'linen', 'src' => 'excerpt-view'),
           //'keywords'          => array( 'testimonial', 'quote' ),
         ));

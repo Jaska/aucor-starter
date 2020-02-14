@@ -59,7 +59,10 @@
 @import "blocks/settings/blocks-alignment";
 @import "blocks/settings/blocks-colors";
 
+@import "blocks/custom/_nostoblokki.scss";
 @import "blocks/custom/_korttilista.scss";
+@import "elements/_teaser.scss";
+
 
 
 // hide font-size selection

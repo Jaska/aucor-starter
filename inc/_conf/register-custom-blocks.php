@@ -39,7 +39,7 @@ function register_custom_blocks() {
           'render_template'   => 'partials/content/sivulista.php',
           'category'          => 'formatting',
           // 'icon'              => 'admin-comments',
-          'mode'              => 'edit',
+          'mode'              => 'preview',
           'icon'              => array('background' => 'linen', 'src' => 'excerpt-view'),
           //'keywords'          => array( 'testimonial', 'quote' ),
         ));

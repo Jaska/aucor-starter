@@ -344,15 +344,13 @@
             "acfe_permissions": "",
             "choices": {
                 "default": "Oletuspohja",
-                "large": "Isompi - enemmän tietoa näkyvillä"
+                "korttilista": "Korttityylinen listaus"
             },
             "default_value": [],
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
             "return_format": "value",
-            "acfe_validate": "",
-            "acfe_update": "",
             "ajax": 0,
             "placeholder": ""
         }
@@ -382,5 +380,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1572455233
+    "modified": 1581530170
 }

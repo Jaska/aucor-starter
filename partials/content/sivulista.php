@@ -16,16 +16,27 @@ if( !empty($block['anchor']) ) {
     $id = $block['anchor'];
 }
 
-// Create class attribute allowing for custom "className" and "align" values.
-$className = 'sivulista';
+$template = get_field('sivulista_template');
+if ($template == 'default'){
+  $bem = 'sivulista';
+  $post_template = 'teaser';
+} else {
+  $bem = $template;
+  $post_template = 'card';
+}
+$class[] = $bem;
+
 if( !empty($block['className']) ) {
-    $className .= ' ' . $block['className'];
+    $class[] = $block['className'];
 }
 if( !empty($block['align']) ) {
-    $className .= ' align' . $block['align'];
+  $class[] = 'align' . $block['align'];
 }
-$className .= ' ';
-$className .= get_field('sivulistan_tausta') ?: 'brand';
+$class[] = get_field('sivulistan_tausta') ?: 'brand';
+
+/**
+ * Tehdään BEM Block nimi sivulista, henkilolista, xlista,
+ */
 
 $page_list_format = get_field('page_list_format');
 $posts_per_page = get_field('sivulistaus')['amount'] ? get_field('sivulistaus')['amount'] : '12';
@@ -79,24 +90,22 @@ if ($category){
 // The Query
 $query = new WP_Query( $args );
 
-$className .= $block['align'] ? 'align' . $block['align'] : '';
-
 $post_count_class = count($query->posts) ? 'post_count_'.count($query->posts) : false;
 if ($post_count_class){
-  $className .= ' '.$post_count_class;
+  $class[] = $post_count_class;
 }
 ?>
-<div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
-	<div class="sivulista__container">
+<div id="<?php echo esc_attr($id); ?>" class="sivulista <?php echo esc_attr(implode(' ', $class)); ?>">
+	<div class="<?php echo $bem;?>__container">
 		<?php
 		// The Loop
 		if ( $query->have_posts() ) {
-			echo '<div class="sivulista__posts">';
+			echo '<div class="'.$bem.'__posts">';
 			while ( $query->have_posts() ) {
         $query->the_post();
         // setup_postdata( $post );
         $post_type = get_post_type() ?? '';
-        get_template_part('partials/content/card', $post_type);
+        get_template_part('partials/content/'.$post_template, $post_type);
 
 			}
 			echo '</div>';

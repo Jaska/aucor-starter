@@ -151,7 +151,7 @@ add_action('wp_footer', function() {
  *
  * Add favicons' <link> and <meta> tags here
  */
-function starter_favicons() {
+function theme_favicons() {
   // Use https://realfavicongenerator.net and insert all files in dist/favicon
   $x = get_template_directory_uri().'/dist/favicon';
   ?>
@@ -163,6 +163,6 @@ function starter_favicons() {
   <meta name="theme-color" content="#ffffff">
   <?php
 }
-add_action('wp_head',    'starter_favicons');
-add_action('admin_head', 'starter_favicons');
-add_action('login_head', 'starter_favicons');
+add_action('wp_head',    'theme_favicons');
+add_action('admin_head', 'theme_favicons');
+add_action('login_head', 'theme_favicons');

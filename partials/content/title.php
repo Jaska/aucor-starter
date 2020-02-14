@@ -4,14 +4,14 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package starter_19
+ * @package aucor_starter_19
  */
 
 // title
 if (is_singular()) {
 	$title = get_the_title();
 	} else {
-	$title = starter_get_the_archive_title();
+	$title = aucor_starter_get_the_archive_title();
 }
 
 // description
@@ -25,7 +25,7 @@ if (is_singular()) {
 // meta
 $meta = '';
 if (is_singular() && get_post_type() === 'post') {
-  $meta = starter_get_posted_on();
+  $meta = aucor_starter_get_posted_on();
 }
 ?>
 

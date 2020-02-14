@@ -12,7 +12,7 @@
  *
  * @return int harcoded id
  */
-function starter_get_hardcoded_id($key = '') {
+function aucor_starter_get_hardcoded_id($key = '') {
 
   switch ($key) {
 

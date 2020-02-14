@@ -10,7 +10,7 @@ function get_lang_object($id, $return_object = true){
 function get_lang_content($id, $return_object = false){
   if (!is_int($id)){
     if (is_string($id)){
-      $id = starter_get_hardcoded_id($id);
+      $id = aucor_starter_get_hardcoded_id($id);
       if ($id == '0'){
         return;
       }

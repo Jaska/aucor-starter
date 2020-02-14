@@ -35,7 +35,7 @@ function get_relevant_sidebar(){
     }
   } else {
     // no posts found
-    $sidebar_id = array(starter_get_hardcoded_id('default_sidebar'));
+    $sidebar_id = array(aucor_starter_get_hardcoded_id('default_sidebar'));
   }
   // Restore original Post Data
   wp_reset_postdata();

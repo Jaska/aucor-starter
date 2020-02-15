@@ -47,6 +47,7 @@ function aucor_starter_gutenberg_allowed_blocks($allowed_block_types, $post) {
   $blocks[] = 'core/media-text';
   $blocks[] = 'core/columns';
   $blocks[] = 'core/separator';
+  $blocks[] = 'core/group';
 
   /**
    * Widgets

@@ -152,11 +152,13 @@ input[type="submit"]:focus,
 }
 
 span[data-hyphens]{
-  word-wrap: break-word;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
+  @media(max-width: $s){
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+  }
 }
 
 iframe {

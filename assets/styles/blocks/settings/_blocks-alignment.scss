@@ -19,11 +19,12 @@
   }
 
   & > .alignfull {
-    margin-top: $gap-big;
-    margin-bottom: $gap-big;
+    margin-top: $gap;
+    margin-bottom: $gap;
     margin-left: -$gap;
     margin-right: -$gap;
     max-width: none;
+    width: calc(100% + #{$gap} *2);
 
     img {
       max-width: none;
@@ -33,8 +34,8 @@
   }
 
   & > .alignwide {
-    margin-top: $gap-big;
-    margin-bottom: $gap-big;
+    margin-top: $gap;
+    margin-bottom: $gap;
     max-width: $max-width-l;
   }
 

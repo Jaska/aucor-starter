@@ -30,3 +30,22 @@ wp.domReady(function() {
   });
 
 });
+
+function setWideDefault( settings, name ) {
+  if ( name !== 'core/columns' ) {
+      return settings;
+  }
+  console.log(settings);
+  return lodash.assign( {}, settings, {
+      attributes: lodash.assign( {}, settings.attributes, {
+          align: {
+              default: 'wide'
+          }
+      } ),
+  } );
+}
+wp.hooks.addFilter(
+  'blocks.registerBlockType',
+  'my-plugin/class-names/column-block',
+  setWideDefault
+);

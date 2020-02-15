@@ -19,6 +19,17 @@
     margin: 0 0 $gap;
     @include child-margin-reset;
 
+
+    &.is-vertically-aligned-center {
+      align-self: center;
+    }
+    &.is-vertically-aligned-bottom {
+      align-self: flex-end;
+    }
+    &.is-vertically-aligned-top {
+      align-self: flex-start;
+    }
+
   }
 
   &.alignwide,
@@ -45,7 +56,8 @@
     justify-content: space-between;
     & > * {
       flex-shrink: 0;
-      width: calc(100% / 2 - #{1/2*$gap});
+      // width: calc(100% / 2 - #{1/2*$gap});
+      flex: 0 0 50%;
     }
   }
 
@@ -105,6 +117,54 @@
 /* Only back-end
 ----------------------------------------------- */
 
-// .editor-styles-wrapper .wp-block-columns {
+.wp-block-columns {
+  $item : '.wp-block-column';
+  $limit : 6;
+  $breakpoint : $s;
+  @for $i from 1 through $limit {
+    $selector: '';
+    @if $i == $limit {
+      $selector: 'n+';
+    }
 
-// }
+    #{$item}:nth-last-child(#{$selector}#{$i}):nth-child(1),
+    #{$item}:nth-last-child(#{$selector}#{$i}):nth-child(1) ~ #{$item} {
+      @media(min-width: $breakpoint){
+        // width: (100%/$i);
+        flex-basis: calc((100%/#{$i}));
+      }
+    }
+  }
+}
+
+.site {
+  .wysiwyg {
+    overflow: hidden;
+  }
+
+  .wp-block-column.wp-block-column {
+    padding-left: $gap/2;
+    padding-right: $gap/2;
+    @media(min-width: $s){
+      margin-bottom: 0;
+    }
+  }
+
+  .wp-block-columns.wp-block-columns {
+    // margin-bottom: -$gap;
+    max-width: calc(#{$max-width-m} + #{$gap});
+    margin-left: -$gap/2;
+    margin-right: -$gap/2;
+    transform: translateX(calc((100vw - 100%) / 2 - #{$gap} / 2)); //align to center
+
+    &.alignwide {
+      max-width: calc(#{$max-width-l} + #{$gap});
+    }
+    &.alignfull {
+      max-width: none;
+      width: calc(100vw + #{$gap}); //disable this to have padding outside
+    }
+  }
+}
+
+

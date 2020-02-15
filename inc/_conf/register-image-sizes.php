@@ -65,7 +65,7 @@ function aucor_starter_human_image_size_to_wp_sizes($human_size) {
     case 'hero':
       return array(
         'primary'    => 'hero_md',
-        'supporting' => ['full', 'hero_xl', 'hero_md', 'hero_sm'],
+        'supporting' => ['hero_xl', 'hero_md', 'hero_sm'],
         'sizes'      => '100vw'
       );
 

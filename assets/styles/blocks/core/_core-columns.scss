@@ -152,6 +152,7 @@
 
   .wp-block-columns.wp-block-columns {
     // margin-bottom: -$gap;
+    min-width: 0;
     max-width: calc(#{$max-width-m} + #{$gap});
     margin-left: -$gap/2;
     margin-right: -$gap/2;

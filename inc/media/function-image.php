@@ -42,6 +42,10 @@ function aucor_starter_get_image($attachment_id, $human_size = 'large', $args = 
   // parse args
   $args = wp_parse_args($args, $defaults);
 
+  if (is_admin()) {
+    $args['lazyload'] = false;
+  }
+
   // build html attributes
   $attr = $args['attr'];
   $attr['alt'] = $args['alt'];

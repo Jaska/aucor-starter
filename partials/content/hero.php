@@ -10,6 +10,11 @@
 // extra classes
 $class = array();
 
+$banner_pohja = get_field('banner_pohja') ?? 'default';
+if ($banner_pohja == 'remove'){
+  return;
+}
+
 // title
 if (is_singular()) {
   $title = get_the_title();

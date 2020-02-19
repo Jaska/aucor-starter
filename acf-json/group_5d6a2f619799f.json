@@ -3,26 +3,6 @@
     "title": "Yleiset lisäkentät",
     "fields": [
         {
-            "key": "field_5d6a304d5f1ca",
-            "label": "Banner alaotsikko",
-            "name": "banner_alaotsikko",
-            "type": "text",
-            "instructions": "Pääotsikon alla oleva otsikko",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_permissions": "",
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
             "key": "field_5d6a2f72b4570",
             "label": "Artikkelikuva",
             "name": "_thumbnail_id",
@@ -36,8 +16,10 @@
                 "id": ""
             },
             "acfe_permissions": "",
+            "acfe_uploader": "wp",
+            "acfe_thumbnail": 0,
             "return_format": "array",
-            "preview_size": "medium",
+            "preview_size": "hero_md",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -45,17 +27,14 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": "",
-            "acfe_thumbnail": 0,
-            "acfe_validate": "",
-            "acfe_update": ""
+            "mime_types": ""
         },
         {
             "key": "field_5d6a2f7eb4571",
             "label": "Banner pohja",
             "name": "banner_pohja",
             "type": "button_group",
-            "instructions": "Artikkelikuva, korkeampi kuva teksteillä, video, diashow",
+            "instructions": "Bannerin, eli sisällön yläpuolisen alueen pohja.\r\nMikäli poistat bannerin, pidä huoli että H1 elementti löytyy sisällöstä.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -65,13 +44,41 @@
             },
             "acfe_permissions": "",
             "choices": {
-                "oletus": "Artikkelikuva",
-                "iso_banner": "Korkeampi kuva tekstillä"
+                "default": "Artikkelikuva",
+                "remove": "Poista banner"
             },
             "allow_null": 0,
             "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_5d6a304d5f1ca",
+            "label": "Banner alaotsikko",
+            "name": "banner_alaotsikko",
+            "type": "text",
+            "instructions": "Pääotsikon alla oleva otsikko",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6a2f7eb4571",
+                        "operator": "!=",
+                        "value": "remove"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_5d6a30f55f1cf",
@@ -233,5 +240,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1575982003
+    "modified": 1582100217
 }

@@ -50,6 +50,14 @@ add_action('after_setup_theme', function() {
 
 });
 
+function create_custom_image_size($sizes){
+  $custom_sizes = array(
+  'square_xl' => 'Square'
+  );
+  return array_merge( $sizes, $custom_sizes );
+}
+add_filter('image_size_names_choose', 'create_custom_image_size');
+
 
 /**
  * Turn human readable image size into responsive sizes

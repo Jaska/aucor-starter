@@ -37,15 +37,25 @@ function add_crop_button_to_acf_images( $field ) {
 		});
 	});
   </script>
-  <style>
-    .crop-button__container {
-      display: none;
-    }
-    .acf-image-uploader.has-value + .crop-button__container {
-      display: block;
-    }
-  </style>
+
   <?php
+  static $result;
+  if ( $result !== null ){
+
+  } else {
+    $result = '1';
+    ?>
+      <style>
+      .crop-button__container {
+        display: none;
+      }
+      .acf-image-uploader.has-value + .crop-button__container {
+        display: block;
+      }
+    </style>
+    <?php
+  }
+
 }
 
 // Apply to image fields.

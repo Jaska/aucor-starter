@@ -26,6 +26,10 @@
     max-width: none;
     width: calc(100% + #{$gap} *2);
 
+    &:first-child {
+      margin-top: 0;
+    }
+
     img {
       max-width: none;
       width: 100%;
@@ -37,6 +41,10 @@
     margin-top: $gap;
     margin-bottom: $gap;
     max-width: $max-width-l;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   // float left

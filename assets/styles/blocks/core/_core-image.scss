@@ -50,6 +50,12 @@
     font-size: .875rem;
   }
 
+  &.is-style-circle-mask {
+    img {
+      border-radius: 50%;
+    }
+  }
+
 }
 
 /* Only front-end

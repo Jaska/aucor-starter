@@ -81,7 +81,7 @@ $linkki = $acf_link ?? $fb_linkki;
 if($kuva){
   switch($pohja){
     case "fixed_1":
-      $size = 'thumbnail';
+      $size = 'hero_xl';
     break;
     case "fixed_2":
       $size = "square_xl";

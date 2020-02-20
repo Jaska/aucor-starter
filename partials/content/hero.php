@@ -22,6 +22,11 @@ if (is_singular()) {
   $title = aucor_starter_get_the_archive_title();
 }
 
+$override_title = get_field('banner_otsikko') ?? false;
+if ($override_title){
+  $title = $override_title;
+}
+
 // description
 $description = '';
 if (is_singular()) {

@@ -15,6 +15,7 @@ $pohja = $fields['template'] ?? 'default';
 $pohja = strtolower($pohja);
 $block_id = 'bid--'.wp_generate_uuid4();
 $word_amount = 13;
+$fb_kuva = '';
 
 $link_id = get_field('link');
 if (is_object($link_id)) {

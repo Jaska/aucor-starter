@@ -105,8 +105,9 @@ function aucor_starter_human_image_size_to_wp_sizes($human_size) {
         'sizes'      => '100px'
       );
 
-    default:
-      error_log('Image size error - Missing human readable size {' . $human_size . '}', array('skiparja_get_image'));
+      // default:
+      // aucor_starter_debug('Image size error - Missing human readable size {' . $human_size . '}', array('aucor_starter_get_image'));
+
 
   }
 

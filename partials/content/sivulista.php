@@ -42,6 +42,7 @@ $page_list_format = get_field('page_list_format');
 $posts_per_page = get_field('sivulistaus')['amount'] ? get_field('sivulistaus')['amount'] : '12';
 $custom_post_type = get_field('sivulistaus')['custom_post_type'] ? get_field('sivulistaus')['custom_post_type'] : 'post';
 $category = get_field('sivulistaus')['kategoria'] ? get_field('sivulistaus')['kategoria'] : 0;
+$parent_page = get_field('sivulistaus')['parent_page'] ?? false;
 
 $orderby = get_field('sivulistaus')['orderby'] ?? 'date';
 $order = get_field('sivulistaus')['order'] ?? 'DESC';
@@ -67,6 +68,12 @@ $args = array(
 	'orderby'                  => $orderby,
 	'order'                  => $order,
 );
+
+if ($parent_page){
+  $parent_page_id = $parent_page->ID;
+  // var_dump($parent_page_id);
+  $args['post_parent__in'] = array($parent_page_id);
+}
 
 if ($page_list_format == 2){
 	$erikseen_valitut_sisallot = get_field('erikseen_valitut_sisallot', false, false);

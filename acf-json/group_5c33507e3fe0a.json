@@ -121,6 +121,40 @@
                     "allow_custom": 0
                 },
                 {
+                    "key": "field_5e4e713e85c72",
+                    "label": "Näytä vain tämän sivun alasivut",
+                    "name": "parent_page",
+                    "type": "post_object",
+                    "instructions": "Mikäli aktiivinen, näyttää vain suorat alisivut valitulle sivulle.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5c3350972a36b",
+                                "operator": "==",
+                                "value": "page"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_permissions": "",
+                    "post_type": "",
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "allow_custom": 0,
+                    "save_post_status": "publish",
+                    "acfe_bidirectional": {
+                        "acfe_bidirectional_enabled": "0"
+                    },
+                    "ui": 1
+                },
+                {
                     "key": "field_5c33516d2a36c",
                     "label": "Lukumäärä",
                     "name": "amount",

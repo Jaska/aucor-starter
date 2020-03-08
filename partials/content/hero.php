@@ -52,6 +52,10 @@ if (empty($image)){
   $image = aucor_starter_get_image(get_post_thumbnail_id(get_option('page_on_front')), 'hero', ['lazyload' => 'animated']);
 }
 
+if ($banner_pohja == 'no_image'){
+  $image = null;
+}
+
 if (!empty($image)) {
   $class[] = 'hero--has-background';
 } else {

@@ -128,8 +128,16 @@ add_action('wp_footer', function() {
  * Add favicons' <link> and <meta> tags here
  */
 function aucor_starter_favicons() {
-
+  // Use https://realfavicongenerator.net and insert all files in dist/favicon
+  $x = get_template_directory_uri().'/dist/favicon'; ?>
+  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $x; ?>/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo $x; ?>/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo $x; ?>/favicon-16x16.png">
+  <link rel="mask-icon" href="<?php echo $x; ?>/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <?php
 }
-add_action('wp_head',    'aucor_starter_favicons');
-add_action('admin_head', 'aucor_starter_favicons');
-add_action('login_head', 'aucor_starter_favicons');
+// add_action('wp_head',    'aucor_starter_favicons');
+// add_action('admin_head', 'aucor_starter_favicons');
+// add_action('login_head', 'aucor_starter_favicons');

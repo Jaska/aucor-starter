@@ -148,6 +148,9 @@ find "$basedir" -name 'style.css' -type f -exec perl -p -i -e "s|$default_author
 
 echo "--> Set author url .......... ${green}done${txtreset}"
 
+echo "Create empty last-edited.json${txtreset}"
+echo "{}" > assets/last-edited.json
+
 echo "--> ${green}Setup complete!${txtreset}"
 
 echo "--> setup.sh removed"

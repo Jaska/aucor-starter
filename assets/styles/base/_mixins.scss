@@ -246,3 +246,58 @@
 @mixin narrow-content {
   max-width: #{$max-width-m + 2*$gap};
 }
+
+/**
+ * Convert font-size from px to rem with px fallback
+ * @param $size - the value in pixel you want to convert
+ * e.g. p {@include fontSize(12px);}
+ *
+ */
+
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+//Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+// Function for converting a px based font-size to rem.
+@function calculateEm($size) {
+  $emSize: $size / 16px;
+//Default font size on html element is 100%, equivalent to 16px;
+  @return #{$emSize}em;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@function rem($size){
+  @return calculateRem($size);
+}
+
+@function em($size){
+  @return calculateEm($size);
+}
+
+@function themefontsize($px){
+  $x : $px * 0.8;
+  @return rem($x);
+}
+
+@mixin admin-sticky-fix( $offset: 0 ) {
+  $narrow-offset: 46px;
+  $wide-offset: 32px;
+  @if $offset != 0 and type-of($offset) == 'number' {
+    $narrow-offset: $narrow-offset + $offset;
+    $wide-offset: $wide-offset + $offset;
+  }
+  .admin-bar & {
+    top: $narrow-offset;
+    @media screen and (min-width: 783px) {
+      top: $wide-offset;
+    }
+  }
+}

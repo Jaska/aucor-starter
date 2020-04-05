@@ -45,6 +45,7 @@ require_once 'inc/components/list-terms.php';
 require_once 'inc/helpers/function-dates.php';
 require_once 'inc/helpers/function-hardcoded-ids.php';
 require_once 'inc/helpers/function-last-edited.php';
+require_once 'inc/helpers/show-image-with-admin-lists.php';
 
 /**
  * Hooks and setup

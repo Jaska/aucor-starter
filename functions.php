@@ -46,6 +46,7 @@ require_once 'inc/helpers/function-dates.php';
 require_once 'inc/helpers/function-hardcoded-ids.php';
 require_once 'inc/helpers/function-last-edited.php';
 require_once 'inc/helpers/show-image-with-admin-lists.php';
+require_once 'inc/helpers/add-crop-button-acf-images.php';
 
 /**
  * Hooks and setup

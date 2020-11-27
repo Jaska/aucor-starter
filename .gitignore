@@ -24,3 +24,7 @@ node_modules
 *.tar
 *.tgz
 *.gz
+
+# no longer track dist folder
+dist
+/assets/last-edited.json

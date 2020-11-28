@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "show-image-with-admin-lists",
+    "version": "1.0.0"
+  },
+  "php": {
+    "inc": [
+      "show-image-with-admin-lists.php"
+    ]
+  }
+}

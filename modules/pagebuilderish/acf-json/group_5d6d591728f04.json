@@ -1,0 +1,84 @@
+{
+    "key": "group_5d6d591728f04",
+    "title": "Sivupalkit lisäkentät",
+    "fields": [
+        {
+            "key": "field_5d6d5920d3a35",
+            "label": "Käytä tätä sivupalkkia näissä sisällöissä",
+            "name": "yhdista_sivupalkki_cpt",
+            "type": "acfe_post_types",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "field_type": "checkbox",
+            "return_format": "name",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6f3e0dcf24a",
+            "label": "Lisäksi yhdistä sivupalkki näihin yksittäisiin sivuihin",
+            "name": "yhdista_sivupalkki_post",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "post_type": "",
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": [
+                "featured_image"
+            ],
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "1",
+                "acfe_bidirectional_related": "field_5d6f41e0b0afa"
+            },
+            "acfe_validate": "",
+            "acfe_update": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sivupalkit"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_note": "",
+    "acfe_meta": "",
+    "modified": 1567613116
+}

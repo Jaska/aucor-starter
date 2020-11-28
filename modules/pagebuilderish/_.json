@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "title": "pagebuilderish",
+    "version": "1.0.0"
+  },
+  "php": {
+    "inc": [
+      "setup.php"
+    ]
+  },
+  "js": {
+    "main.js": [],
+    "editor-gutenberg.js": []
+  }
+}

@@ -1,0 +1,112 @@
+{
+    "key": "group_5d6b5e4b4d984",
+    "title": "Arkistosivujen lisäkentät",
+    "fields": [
+        {
+            "key": "field_5d6b5e52652d7",
+            "label": "Sivupohjan oletussisällöt",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "Tämän kautta voit tarkentaa sivuston elementit.\r\n\r\nSivuston osat -sivun kentät määritetään kaikkialle. Muissa postaustyypeissa, sivut, artikkelit yms.. voidaan yliajaa nämä määritykset.\r\nYhdessä postaustyypissä voidaan myös yliajaa tämä ja kustomoida vain sitä varten.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5d6b5fc7652d9",
+            "label": "Aseta sivun alaosio",
+            "name": "aseta_sivun_alaosio",
+            "type": "true_false",
+            "instructions": "Mikäli tämä on \"Sivuston osat\" -arkistosivu, nämä näytetään kaikkialla. Mikäli tämä on jokin toinen arkistosivu, tällä voidaan yliajaa kyseisiä postauksia kohdistuvat.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "acfe_validate": "",
+            "acfe_update": ""
+        },
+        {
+            "key": "field_5d6b603c652da",
+            "label": "Määritä sivun alaosiot",
+            "name": "sivun_alaosiot",
+            "type": "relationship",
+            "instructions": "Järjestele elementit raahaamalla. Footer ja kartta -osiot näkyvät kaikkialla tästä huolimatta - niitä ei tarvitse laittaa uudelleen",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5d6b5fc7652d9",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_permissions": "",
+            "post_type": [
+                "osat"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "elements": "",
+            "min": "",
+            "max": "",
+            "return_format": "object",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "acfe_validate": "",
+            "acfe_update": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type_list",
+                "operator": "==",
+                "value": "all"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_permissions": "",
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1572448618
+}

@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "add-crop-button-acf-images",
+    "version": "1.0.0"
+  },
+  "php": {
+    "inc": [
+      "add-crop-button-acf-images.php"
+    ]
+  }
+}

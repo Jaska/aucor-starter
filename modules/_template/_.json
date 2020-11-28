@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "blankblock",
+    "version": "1.0.0"
+  },
+  "php": {
+    "inc": [
+      "setup.php",
+      "component.php"
+    ]
+  },
+  "css": {
+    "main.css": [
+      "assets/styles/blankblock.scss"
+    ],
+    "admin.css": [],
+    "editor-gutenberg.css": [
+      "assets/styles/blankblock.scss"
+    ]
+  },
+  "js": {
+    "main.js": [],
+    "editor-gutenberg.js": []
+  }
+}

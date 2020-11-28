@@ -1,0 +1,16 @@
+/* ==========================================================================
+ # blankblock component styles
+========================================================================== */
+
+@import '../../../../assets/styles/utils.scss';
+
+/* Component, block front-end and back-end
+----------------------------------------------- */
+
+.blankblock {
+
+  @at-root .block-editor-page & {
+    pointer-events: none !important;
+  }
+
+}

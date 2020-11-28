@@ -1,0 +1,200 @@
+/* ==========================================================================
+ # nostoblokki block and Aucor_Spacer component
+========================================================================== */
+
+@import '../../../../assets/styles/utils.scss';
+
+/* Component, block front-end and back-end
+----------------------------------------------- */
+
+.nostoblokki {
+  $this: '.nostoblokki';
+
+  @at-root .block-editor-page & {
+    pointer-events: none !important;
+  }
+
+  &.alignfull {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+  }
+
+  &.is-first-block {
+    margin-top: 0;
+  }
+
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  &:before {
+    content: "";
+    float: left;
+    @include aspect-ratio(3, 1);
+  }
+  &:after {
+    clear: left;
+    content: ' ';
+    display: table;
+  }
+
+  &, a {
+    color: #FFF;
+    text-decoration: none;
+  }
+
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.65);
+
+  &__kuva {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    picture, img {
+      width: 100%;
+      max-width: none;
+      height: 100%;
+      vertical-align: bottom;
+      object-fit: cover;
+      object-position: center center;
+      transform: scale(1);
+      @include transition;
+      // @at-root #{$this}:hover & {
+      //   transform: scale(1.048);
+      // }
+    }
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    @include wrap;
+    @include narrow-content;
+    width: 100%;
+    padding: $gap-small;
+  }
+  &.alignfull {
+    #{$this}__content {
+      @include wrap;
+    }
+  }
+  &.text-alignment {
+
+    &--top_left #{$this}__content {
+      align-self: flex-start;
+      text-align: left;
+    }
+    &--top_center #{$this}__content {
+      align-self: flex-start;
+      text-align: center;
+    }
+    &--top_right #{$this}__content {
+      align-self: flex-start;
+      text-align: right;
+    }
+    &--middle_left #{$this}__content {
+      align-self: center;
+      text-align: left;
+    }
+    &--middle_center #{$this}__content {
+      align-self: center;
+      text-align: center;
+    }
+    &--middle_right #{$this}__content {
+      align-self: center;
+      text-align: right;
+    }
+    &--bottom_left #{$this}__content {
+      align-self: flex-end;
+      text-align: left;
+    }
+    &--bottom_center #{$this}__content {
+      align-self: flex-end;
+      text-align: center;
+    }
+    &--bottom_right #{$this}__content {
+      align-self: flex-end;
+      text-align: right;
+    }
+  }
+
+  &__otsikko {
+    font-weight: 500;
+    font-family: $font-title;
+    font-size: themefontsize(28px);
+  }
+  .alignfull &__otsikko {
+    font-size: themefontsize(48px);
+  }
+
+  &.alignfull + .nostoblokki.alignfull {
+    margin-top: -4rem;
+    margin-top: -3rem;
+    // border-top: 2px dashed $primary;
+  }
+
+  &--default {
+    &:before {
+      // 8:5 for smaller screens
+      @include aspect-ratio(8, 5);
+
+      // 8:3 for middle size
+      @include breakpoint($hero-m) {
+        @include aspect-ratio(8, 3);
+      }
+
+      // 3:1 for bigger screens
+      @include breakpoint($hero-l) {
+        @include aspect-ratio(3, 1);
+      }
+    }
+  }
+
+  //imagepanel system
+  $panelgap : $gap;
+  $panelheight : 286px; //286 on hyvä kun 4 vierekkäin on neliöt
+
+  &--fixed_1 {
+    &:before {
+      padding-bottom: $panelheight;
+    }
+  }
+  &--fixed_2 {
+    &:before {
+      padding-bottom: calc(#{$panelheight} * 2 + #{$panelgap});
+    }
+  }
+
+  & + & {
+    margin-top: $panelgap;
+  }
+
+
+  // &--iso_nelio {
+  //   padding-top: calc((1 / 1) * 100%);
+  // }
+  // &--korkea_ohut {
+  //   padding-top: calc(2 / 1 * 100%);
+  // }
+  // &--pieni_levea {
+  //   padding-top: calc(1 / 3 * 100%);
+  // }
+
+  // &--iso_nelio,
+  // &--korkea_ohut,
+  // &--pieni_levea {
+  //   #{$this}__otsikko {
+  //     align-items: flex-end;
+  //   }
+  // }
+
+}

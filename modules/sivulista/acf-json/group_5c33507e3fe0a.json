@@ -1,0 +1,412 @@
+{
+  "key": "group_5c33507e3fe0a",
+  "title": "Block: Sivulista",
+  "fields": [
+      {
+          "key": "field_5c3351c82a36e",
+          "label": "Sivulistan sisällöt",
+          "name": "page_list_format",
+          "type": "radio",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "hide_admin": 0,
+          "choices": {
+              "1": "Sivulistaus valintojen mukaan",
+              "2": "Valitse itse sivut"
+          },
+          "allow_null": 0,
+          "other_choice": 0,
+          "default_value": "",
+          "layout": "horizontal",
+          "return_format": "value",
+          "save_other_choice": 0
+      },
+      {
+          "key": "field_5c33537f2a36f",
+          "label": "Erikseen valitut sisällöt",
+          "name": "erikseen_valitut_sisallot",
+          "type": "relationship",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5c3351c82a36e",
+                      "operator": "==",
+                      "value": "2"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "acfe_permissions": "",
+          "post_type": "",
+          "taxonomy": "",
+          "filters": [
+              "search",
+              "post_type",
+              "taxonomy"
+          ],
+          "elements": [
+              "featured_image"
+          ],
+          "min": "",
+          "max": "",
+          "return_format": "object",
+          "acfe_bidirectional": {
+              "acfe_bidirectional_enabled": "0"
+          },
+          "acfe_validate": "",
+          "acfe_update": ""
+      },
+      {
+          "key": "field_5c3354012a372",
+          "label": "Sivulistaus",
+          "name": "sivulistaus",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5c3351c82a36e",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "hide_admin": 0,
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_5c3350972a36b",
+                  "label": "Sisältötyyppi",
+                  "name": "custom_post_type",
+                  "type": "acfe_post_types",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "acfe_permissions": "",
+                  "post_type": "",
+                  "field_type": "select",
+                  "default_value": "",
+                  "return_format": "name",
+                  "allow_null": 0,
+                  "multiple": 1,
+                  "ui": 1,
+                  "ajax": 0,
+                  "choices": [],
+                  "placeholder": "",
+                  "layout": "",
+                  "toggle": 0,
+                  "allow_custom": 0,
+                  "search_placeholder": ""
+              },
+              {
+                  "key": "field_5e4e713e85c72",
+                  "label": "Näytä vain tämän sivun alasivut",
+                  "name": "parent_page",
+                  "type": "post_object",
+                  "instructions": "Mikäli aktiivinen, näyttää vain suorat alisivut valitulle sivulle.",
+                  "required": 0,
+                  "conditional_logic": [
+                      [
+                          {
+                              "field": "field_5c3350972a36b",
+                              "operator": "==",
+                              "value": "page"
+                          }
+                      ]
+                  ],
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "acfe_permissions": "",
+                  "post_type": "",
+                  "taxonomy": "",
+                  "allow_null": 0,
+                  "multiple": 0,
+                  "return_format": "object",
+                  "allow_custom": 0,
+                  "save_post_status": "publish",
+                  "acfe_bidirectional": {
+                      "acfe_bidirectional_enabled": "0"
+                  },
+                  "ui": 1
+              },
+              {
+                  "key": "field_5c33516d2a36c",
+                  "label": "Lukumäärä",
+                  "name": "amount",
+                  "type": "number",
+                  "instructions": "Kuinka monta näytetään. Laita \"-1\" niin näyttää kaikki.",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "hide_admin": 0,
+                  "default_value": "",
+                  "placeholder": "",
+                  "prepend": "",
+                  "append": "",
+                  "min": "",
+                  "max": "",
+                  "step": ""
+              },
+              {
+                  "key": "field_5c3354a52a373",
+                  "label": "Otetaanko kategoria tämän sivun kategoriasta?",
+                  "name": "otetaanko_kategoria_taman_sivun_kategoriasta",
+                  "type": "true_false",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "hide_admin": 0,
+                  "message": "",
+                  "default_value": 0,
+                  "ui": 0,
+                  "ui_on_text": "",
+                  "ui_off_text": ""
+              },
+              {
+                  "key": "field_5c3351a42a36d",
+                  "label": "Kategoria",
+                  "name": "kategoria",
+                  "type": "taxonomy",
+                  "instructions": "Suodata vain tietyt kategoriat halutessasi",
+                  "required": 0,
+                  "conditional_logic": [
+                      [
+                          {
+                              "field": "field_5c3354a52a373",
+                              "operator": "!=",
+                              "value": "1"
+                          }
+                      ]
+                  ],
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "hide_admin": 0,
+                  "taxonomy": "category",
+                  "field_type": "checkbox",
+                  "add_term": 1,
+                  "save_terms": 0,
+                  "load_terms": 0,
+                  "return_format": "id",
+                  "multiple": 0,
+                  "allow_null": 0
+              },
+              {
+                  "key": "field_5ce2d251cb450",
+                  "label": "Järjestys",
+                  "name": "orderby",
+                  "type": "select",
+                  "instructions": "Minkä mukaan järjestetään",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "acfe_validate": "",
+                  "acfe_update": "",
+                  "acfe_permissions": "",
+                  "choices": {
+                      "date": "Päivämäärä",
+                      "title": "Nimi",
+                      "menu_order": "Valikon järjestys"
+                  },
+                  "default_value": false,
+                  "allow_null": 0,
+                  "multiple": 0,
+                  "ui": 0,
+                  "return_format": "value",
+                  "ajax": 0,
+                  "placeholder": ""
+              },
+              {
+                  "key": "field_5ce2d375cb451",
+                  "label": "Järjestyksen suunta",
+                  "name": "order",
+                  "type": "select",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "acfe_validate": "",
+                  "acfe_update": "",
+                  "acfe_permissions": "",
+                  "choices": {
+                      "DESC": "Laskeva järjestys",
+                      "ASC": "Nouseva järjestys"
+                  },
+                  "default_value": false,
+                  "allow_null": 0,
+                  "multiple": 0,
+                  "ui": 0,
+                  "return_format": "value",
+                  "ajax": 0,
+                  "placeholder": ""
+              }
+          ]
+      },
+      {
+          "key": "field_5c3354fb2a374",
+          "label": "Näytetäänkö linkki",
+          "name": "naytetaanko_linkki_arkistoon",
+          "type": "true_false",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "hide_admin": 0,
+          "message": "",
+          "default_value": 0,
+          "ui": 0,
+          "ui_on_text": "",
+          "ui_off_text": ""
+      },
+      {
+          "key": "field_5c33551f2a375",
+          "label": "Linkin teksti",
+          "name": "linkin_teksti",
+          "type": "text",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5c3354fb2a374",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "hide_admin": 0,
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+      },
+      {
+          "key": "field_5c335a7864e3f",
+          "label": "Linkki",
+          "name": "pagelist_linkki",
+          "type": "page_link",
+          "instructions": "Sivuston sisäinen linkki",
+          "required": 0,
+          "conditional_logic": [
+              [
+                  {
+                      "field": "field_5c3354fb2a374",
+                      "operator": "==",
+                      "value": "1"
+                  }
+              ]
+          ],
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "hide_admin": 0,
+          "post_type": "",
+          "taxonomy": "",
+          "allow_null": 0,
+          "allow_archives": 1,
+          "multiple": 0
+      },
+      {
+          "key": "field_5c339a03354da",
+          "label": "Sivulistan pohja",
+          "name": "sivulista_block_template",
+          "type": "select",
+          "instructions": "Valitse sivulistan pohja (vaikuttaa ulkonäköön, toiminnallisuuksiin…)",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "choices": {
+              "default": "Oletuspohja",
+              "korttilista": "Korttityylinen listaus",
+              "kevytkorttilista": "Kevyempi korttilista",
+              "henkilokuntalista": "Henkilökunta listaus"
+          },
+          "default_value": false,
+          "allow_null": 0,
+          "multiple": 0,
+          "ui": 0,
+          "return_format": "value",
+          "ajax": 0,
+          "placeholder": ""
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "acf\/sivulista"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "modified": 1605775376
+}

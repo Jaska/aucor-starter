@@ -1,0 +1,16 @@
+/* ==========================================================================
+ # sivulista block and Aucor_Spacer component
+========================================================================== */
+
+@import '../../../../assets/styles/utils.scss';
+
+/* Component, block front-end and back-end
+----------------------------------------------- */
+
+.sivulista {
+
+  @at-root .block-editor-page & {
+    pointer-events: none !important;
+  }
+
+}

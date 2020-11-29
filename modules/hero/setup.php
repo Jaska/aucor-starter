@@ -48,8 +48,8 @@ add_filter('aucor_core_pll_register_strings', function($strings) {
 /**
  * Display hero
  */
-add_action('theme_hero', function() {
+add_action('theme_hero',
 
-  Aucor_Hero::render();
+  ['Aucor_Hero', 'render'],
 
-}, 100, 1);
+100, 1);

@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "title": "image-crop-fixer",
+    "version": "1.0.0"
+  },
+  "php": {
+    "inc": [
+      "image-crop-fixer.php"
+    ]
+  }
+}

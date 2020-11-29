@@ -33,3 +33,10 @@ add_filter('allowed_block_types', function ($allowed_block_types, $post) {
   return $blocks;
 
 }, 10, 2);
+
+/**
+ * Filter to allow all blocks (for dev etc.)
+ */
+// add_filter('allowed_block_types', function($allowed_block_types, $post){
+//   return true;
+// }, 40, 2);

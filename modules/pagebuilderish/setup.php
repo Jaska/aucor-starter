@@ -274,3 +274,16 @@ class Favor_Footer extends Aucor_Footer {
   }
 
 }
+
+
+/**
+ * Hero stuff
+ */
+function remove_hero_with_acf(){
+  $banner_template = get_field('banner_pohja');
+  if($banner_template == 'remove'){
+    remove_action('theme_hero', ['Aucor_Hero', 'render'], 100, 1);
+  }
+}
+
+add_action('template_redirect', 'remove_hero_with_acf', 10);

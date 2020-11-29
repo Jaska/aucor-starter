@@ -8,11 +8,11 @@
 /**
  * Place footer
  */
-// add_action('theme_footer', function() {
+add_action('theme_footer',
 
-//   Aucor_Footer::render();
+  ['Aucor_Footer', 'render'],
 
-// }, 100, 0);
+100, 0);
 
 /**
  * Localization

@@ -257,6 +257,8 @@ add_action('theme_footer', function() {
 
 }, 90, 0);
 
+remove_action('theme_footer', ['Aucor_Footer', 'render'], 100, 0);
+
 
 class Favor_Footer extends Aucor_Footer {
   public static function frontend($data) {

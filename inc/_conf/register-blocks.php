@@ -28,6 +28,7 @@ add_filter('allowed_block_types', function ($allowed_block_types, $post) {
   $blocks[] = 'core/freeform';
   $blocks[] = 'core/shortcode';
   $blocks[] = 'core/block';
+  $blocks[] = 'core/group';
 
   // other blocks added from modules
   return $blocks;

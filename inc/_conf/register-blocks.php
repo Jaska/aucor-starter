@@ -30,6 +30,11 @@ add_filter('allowed_block_types', function ($allowed_block_types, $post) {
   $blocks[] = 'core/block';
   $blocks[] = 'core/group';
 
+  /**
+   * Plugins
+   */
+  $blocks[] = 'gravityforms/form';
+
   // other blocks added from modules
   return $blocks;
 

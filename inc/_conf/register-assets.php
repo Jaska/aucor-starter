@@ -14,6 +14,9 @@
  */
 add_action('wp_enqueue_scripts', function() {
 
+  // uncomment to enable jQuery
+  // wp_enqueue_script("jquery");
+
   // main css
   wp_enqueue_style(
     'aucor_starter-style',

@@ -6,6 +6,29 @@
  */
 
 
+  /**
+ * Block templates
+ */
+add_filter('acf/load_field/name=nostoblokki_block_template', function ($field) {
+
+  $field['default_value'] = 'default';
+  $field['choices'] = [
+    "default" => "Tavallinen",
+    // "fixed_1" => "Paneeli",
+    // "fixed_2" => "Korkea paneeli"
+  ];
+  /**
+   * Hides field if just one template
+   */
+  if(count($field['choices']) < 2){
+    // $field['class'] = 'hidden';
+    $field['wrapper']['class'] = 'hidden';
+  }
+  return $field;
+
+});
+
+
 /**
  * Register block
  */
@@ -22,12 +45,30 @@ add_action('acf/init', function () {
       'icon'              => array('background' => 'linen', 'src' => 'excerpt-view'),
       'mode'              => 'preview',
       'supports'          => [
-        'mode'                => false,
-        'align'               => false,
+        'mode'                => true,
+        'align'               => true,
         'multiple'            => true,
         'customClassName'     => false,
       ],
     ]);
+
+    acf_register_block_type([
+      'name'              => 'nostogroup',
+      'title'             => 'Nostoblokki Ryhmä',
+      'render_template'   => 'modules/nostoblokki/block-group.php',
+      'keywords'          => ['nostoblokki', 'page list'],
+      // 'post_types'        => ['page', 'post'],
+      'category'          => 'design',
+      'icon'              => array('background' => 'linen', 'src' => 'excerpt-view'),
+      'mode'              => 'edit',
+      'supports'          => [
+        'mode'                => true,
+        'align'               => true,
+        'multiple'            => true,
+        'customClassName'     => false,
+      ],
+    ]);
+
   }
 
 });
@@ -38,6 +79,7 @@ add_action('acf/init', function () {
 add_filter('allowed_block_types', function($blocks, $post) {
 
   $blocks[] = 'acf/nostoblokki';
+  $blocks[] = 'acf/nostogroup';
   return $blocks;
 
 }, 11, 2);

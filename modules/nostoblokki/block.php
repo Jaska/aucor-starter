@@ -10,21 +10,17 @@
  * @package aucor_starter
  */
 
+$nostoblokki_fields = $args['fields'] ?? get_fields() ?? false;
 
-// nostoblokki::render([
-//   // 'size'    => get_field('spacer_size') ? get_field('spacer_size') : 'm',
-//   'preview' => $is_preview,
-//   'attr'    => ['class' => ['wp-block-acf-nostoblokki']]
-// ]);
+// Override /& create template
+$nostoblokki_fields['nostoblokki_block_template'] = 'solo_nosto';
 
 nostoblokki::render([
-  'acf_params' => [
-    'block' => $block,
-    'content' => $content,
-    'is_preview' => $is_preview,
-    'post_id' => $post_id,
-  ],
-  'preview' => $is_preview,
-  'attr'    => ['class' => ['wp-block-acf-nostoblokki']],
+  'block'     => $block,
+  'post_id'   => $post_id,
+  'content'   => $content,
+  'preview'   => $is_preview,
+  'attr'      => ['class' => ['wp-block-acf-nostoblokki']],
+  'fields'    => $nostoblokki_fields,
 ]);
 

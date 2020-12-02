@@ -64,7 +64,7 @@
       object-fit: cover;
       object-position: center center;
       transform: scale(1);
-      @include transition;
+      // @include transition;
       // @at-root #{$this}:hover & {
       //   transform: scale(1.048);
       // }
@@ -87,6 +87,59 @@
       @include wrap;
     }
   }
+
+  &__otsikko {
+    // font-weight: 500;
+    // font-family: $font-title;
+    // font-size: themefontsize(28px);
+  }
+  .alignfull &__otsikko {
+    // font-size: themefontsize(48px);
+  }
+
+  &.alignfull + .nostoblokki.alignfull {
+    // margin-top: -4rem;
+    margin-top: -3rem;
+    // border-top: 2px dashed $primary;
+  }
+
+  &__group {
+    display: flex;
+    flex-flow: column;
+
+    @include breakpoint($s) {
+      flex-flow: row;
+      & > .nostoblokki.nostoblokki {
+        margin: 0;
+      }
+      // .nostoblokki + .nostoblokki {
+      //   margin-top: 0;
+      // }
+    }
+
+  }
+
+  &--group_nosto {
+    &:before {
+      @include aspect-ratio(16, 10);
+
+      @include breakpoint($s) {
+        @include aspect-ratio(1, 1);
+      }
+    }
+  }
+  &--solo_nosto {
+    &:before {
+      @include aspect-ratio(16, 10);
+
+      @include breakpoint($l){
+        @include aspect-ratio(3, 1);
+      }
+    }
+  }
+
+
+
   &.text-alignment {
 
     &--top_left #{$this}__content {
@@ -127,74 +180,5 @@
     }
   }
 
-  &__otsikko {
-    font-weight: 500;
-    font-family: $font-title;
-    font-size: themefontsize(28px);
-  }
-  .alignfull &__otsikko {
-    font-size: themefontsize(48px);
-  }
-
-  &.alignfull + .nostoblokki.alignfull {
-    margin-top: -4rem;
-    margin-top: -3rem;
-    // border-top: 2px dashed $primary;
-  }
-
-  &--default {
-    &:before {
-      // 8:5 for smaller screens
-      @include aspect-ratio(8, 5);
-
-      // 8:3 for middle size
-      @include breakpoint($hero-m) {
-        @include aspect-ratio(8, 3);
-      }
-
-      // 3:1 for bigger screens
-      @include breakpoint($hero-l) {
-        @include aspect-ratio(3, 1);
-      }
-    }
-  }
-
-  //imagepanel system
-  $panelgap : $gap;
-  $panelheight : 286px; //286 on hyvä kun 4 vierekkäin on neliöt
-
-  &--fixed_1 {
-    &:before {
-      padding-bottom: $panelheight;
-    }
-  }
-  &--fixed_2 {
-    &:before {
-      padding-bottom: calc(#{$panelheight} * 2 + #{$panelgap});
-    }
-  }
-
-  & + & {
-    margin-top: $panelgap;
-  }
-
-
-  // &--iso_nelio {
-  //   padding-top: calc((1 / 1) * 100%);
-  // }
-  // &--korkea_ohut {
-  //   padding-top: calc(2 / 1 * 100%);
-  // }
-  // &--pieni_levea {
-  //   padding-top: calc(1 / 3 * 100%);
-  // }
-
-  // &--iso_nelio,
-  // &--korkea_ohut,
-  // &--pieni_levea {
-  //   #{$this}__otsikko {
-  //     align-items: flex-end;
-  //   }
-  // }
 
 }

@@ -1,61 +1,70 @@
 <?php
-function add_crop_button_to_acf_images( $field ) {
-  if (! is_plugin_active('crop-thumbnails/crop-thumbnails.php') ) {
+function add_crop_button_to_acf_images($field)
+{
+  if (!is_plugin_active('crop-thumbnails/crop-thumbnails.php')) {
     return;
   }
-  $block_id = 'pic--'.wp_generate_uuid4();
-  echo '<div class="crop-button__container" style="margin-top:3px;" id="'.$block_id.'"></div>';
-  ?>
+  $block_id = 'pic--' . wp_generate_uuid4();
+  echo '<div class="crop-button__container" style="margin-top:3px;" id="' . $block_id . '"></div>';
+?>
   <script>
-	jQuery(document).ready(function($) {
-		//add a button right beside the add media button - adjust if you want the button somewhere else
-    $('#<?php echo $block_id; ?>').append('<button type="button" id="<?php echo $block_id;?>__button" class="button">Rajaa kuva</button>');
+    jQuery(document).ready(function($) {
 
-		$('#<?php echo $block_id;?>__button').click(function() {
-			/**
-			 * the ID of the image you want to open
-			 * you may want to read the value by javascript from somewhere
-			 **/
-      var attachementId = $('#<?php echo $block_id ?>').parent().find('input[type="hidden"]').attr('value');
-      // console.log(attachementId);
+      let add_crop_button = function(block_id) {
+        let $ = jQuery;
+        let $block = $('#' + block_id);
+        let $existing_button = $block.find('#' + block_id + '__button');
 
-      if (attachementId === null || attachementId === undefined || attachementId == ''){
-        return;
+        // only one button
+        if ($existing_button.length) {
+          return false;
+        }
+        $block.append('<button type="button" id="' + block_id + '__button" class="button">Rajaa kuva</button>');
+
+        $('#' + block_id + '__button').click(function() {
+
+          var attachment_id = $block.parent().find('input[type="hidden"]').attr('value');
+
+          if (attachment_id === null || attachment_id === undefined || attachment_id == '') {
+            return;
+          }
+
+          /** the posttype decides what imagesizes should be visible - see settings **/
+          var postType = 'post';
+
+          /** the title of the modal dialog */
+          var title = 'Rajaa kuva';
+
+          /** lets open the crop-thumbnails-modal **/
+          var modal = new CROP_THUMBNAILS_VUE.modal();
+          modal.open(attachment_id, postType, title);
+        });
+
       }
 
-      // var attachementId = 123;
+      //add a button right beside the add media button - adjust if you want the button somewhere else
+      add_crop_button('<?php echo $block_id; ?>');
 
-			/** the posttype decides what imagesizes should be visible - see settings **/
-			var postType = 'post';
-
-			/** the title of the modal dialog */
-			var title = 'Rajaa kuva';
-
-			/** lets open the crop-thumbnails-modal **/
-			var modal = new CROP_THUMBNAILS_VUE.modal();
-			modal.open(attachementId, postType, title);
-		});
-	});
+    });
   </script>
 
   <?php
   static $result;
-  if ( $result !== null ){
-
+  if ($result !== null) {
   } else {
     $result = '1';
-    ?>
-      <style>
+  ?>
+    <style>
       .crop-button__container {
         display: none;
       }
-      .acf-image-uploader.has-value + .crop-button__container {
+
+      .acf-image-uploader.has-value+.crop-button__container {
         display: block;
       }
     </style>
-    <?php
+<?php
   }
-
 }
 
 // Apply to image fields.
